@@ -1,6 +1,7 @@
 package com.shaparapatah.lesson1_v2
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
@@ -30,5 +31,23 @@ class MainActivity : AppCompatActivity() {
         val funCopy = KotlinDataClass("FieldOne", "FieldTwo")
         val newCopy = funCopy.copy("FIELDSSSS", "fieldddd")
 
+
+        //
+        var weatherType: WeatherType = WeatherType.CLOUDY
+        val color = when (weatherType) {
+            WeatherType.SUNNY -> R.color.design_default_color_primary
+            WeatherType.RAINY -> R.color.design_default_color_on_secondary
+            WeatherType.CLOUDY -> R.color.design_default_color_primary_variant
+            WeatherType.MISTY -> R.color.design_default_color_surface
+            WeatherType.SNOWY -> R.color.design_default_color_error
+            WeatherType.HAILY -> R.color.cardview_shadow_start_color
+        }
+
+
+        val daysOfWeek =
+            listOf("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+        for (day in daysOfWeek) {
+            Log.d("myLogs", "$day")
+        }
     }
 }
