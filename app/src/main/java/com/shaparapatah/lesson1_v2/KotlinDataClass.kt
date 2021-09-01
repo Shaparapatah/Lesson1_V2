@@ -4,3 +4,8 @@ data class KotlinDataClass(
     var field1: String,
     var field2: String,
 )
+
+
+
+
+

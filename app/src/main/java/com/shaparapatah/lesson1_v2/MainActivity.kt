@@ -17,12 +17,18 @@ class MainActivity : AppCompatActivity() {
 
 
         val btn = findViewById<Button>(R.id.button)
-            btn.setOnClickListener(object : View.OnClickListener{
+        btn.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View?) {
                 Toast.makeText(applicationContext, text, duration).show()
             }
         })
-
     }
 
+
+    fun main() {
+
+        val funCopy = KotlinDataClass("FieldOne", "FieldTwo")
+        val newCopy = funCopy.copy("FIELDSSSS", "fieldddd")
+
+    }
 }
